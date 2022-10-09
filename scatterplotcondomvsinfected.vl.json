@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "title": "Percentage of people infected with HIV in 2016 vs Percentage of people (15-49) that used a condom at last high-risk sex (2016)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/lshi0032/DataVisualisation/main/real_2016_condom_infection_HIV.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "CondomUse",
+      "type": "quantitative",
+      "title": "Percentage of condom use"
+    },
+    "y": {
+      "field": "Percentage_Infection",
+      "type": "quantitative",
+      "title": "Percentage of population infected with HIV"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {
+        "field": "Percentage_Infection",
+        "type": "quantitative",
+        "title": "Percentage of poplation infected with HIV"
+      },
+      {
+        "field": "CondomUse",
+        "type": "quantitative",
+        "title": "Percentage of condom use"
+      }
+    ]
+  },
+  "config": {}
+}
